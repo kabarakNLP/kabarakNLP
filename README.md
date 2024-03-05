@@ -7,7 +7,7 @@
 
 
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=Rogendo&label=Profile%20views&color=0e75b6&style=flat" alt="kabarakNLP" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=KabarakNLP&label=Profile%20views&color=0e75b6&style=flat" alt="kabarakNLP" /> </p>
 
 <p align="left"> <a href="https://twitter.com/kabarakNLP" target="blank"><img src="https://img.shields.io/twitter/follow/kabarakNLP" alt="kabarakNLP" /></a> </p>
 
