@@ -1,4 +1,13 @@
-<h1 align="center"> kabarakNLP</h1>
+<h1 align="center"> kabarakNLP - Advancing our African NLP</h1>
+
+[![Release Notes](https://img.shields.io/github/release/kabarakNLP/kabarakNLP/)](https://github.com/kabarakNLP/kabarakNLP/releases)
+[![Discord](https://img.shields.io/discord/1087698854775881778?label=Discord&logo=discord)](https://discord.gg/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/kabarakNLP/?style=social)](https://twitter.com/kabarakNLP/)
+[![GitHub star chart](https://img.shields.io/github/stars/kabarakNLP/kabarakNLP/?style=social)](https://star-history.com/#kabarakNLP/kabarakNLP/)
+[![GitHub fork](https://img.shields.io/github/forks/kabarakNLP/kabarakNLP/?style=social)](https://github.com/kabarakNLP/kabarakNLP/fork)
+
+English | [中文](./i18n/README-ZH.md) |  Swahili(./i18n/README-SW.md)
+
 
 ![image](https://github.com/user-attachments/assets/e4791a1d-ac55-404a-a304-470f8898b95a)
 
