@@ -1,0 +1,154 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'your-css-file.css' %}">
+    {% endblock %}
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+    }
+    
+    /* Navigation bar styling */
+    header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .navbar-brand {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin-right: 20px;
+    }
+    
+    .nav-menu li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .nav-menu li a:hover {
+        text-decoration: underline;
+    }
+/* Container styling */
+.messages-container, .menu-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Messages styling */
+.messages-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.messages-container ul li {
+    margin-bottom: 10px;
+}
+
+/* Menu styling */
+.menu-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-container ul li {
+    margin-bottom: 10px;
+}
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.menu-container ul li a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_email' %}">{% trans "Change Email" %}</a></li>
+                    <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
+                    {% else %}
+                    <li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
+                    <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    {% block body %}
+    
+    {% if messages %}
+    <div class="messages-container">
+        <strong>{% trans "Messages:" %}</strong>
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    
+    <div class="content-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    {% endblock %}
+    
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+    
+    {% block extra_body %}
+    {% endblock %}
+</body>
+</html>

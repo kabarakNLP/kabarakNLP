@@ -1,0 +1,346 @@
+{% extends '_base.html' %} {% load socialaccount %}
+	{% load static %}
+
+  {% block content %}
+  <div class="landing-page">
+    <div class="content">
+      <div class="container">
+        <div class="info">
+          <h1>KabaraNLP Portfolio </h1>
+          <p>Lets's advance  our African NLP .</p>
+          <button onclick="window.location.href='/about'" class="btn btn-info">More About Us</button>
+        </div>
+        <style>
+
+
+.container__item {
+  margin: 0 auto 40px;
+}
+
+.landing-page-container {
+  width: 100%;
+  min-height: 100%;
+  height: 90rem;
+  background-image: url('https://s29.postimg.org/vho8xb2pj/landing_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #09383E;
+}
+
+.content__wrapper {
+  max-width: 1200px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.ellipses-container {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 10.5rem;
+
+  .logo_name {
+      position: absolute;
+      top: 11.6rem;
+      left: 8rem;
+      right: 0;
+      margin: 0 auto;
+      text-transform: uppercase;
+      letter-spacing: 4rem;
+      font-size: 2.2rem;
+      font-weight: 700;
+      /* opacity: 0.5; */
+
+      &:after{
+          content: '';
+          width: 0.3rem;
+          height: 0.3rem;
+          border-radius: 50%;
+          display: inline-block;
+          background-color: #0C383E;
+          position: relative;
+          top: -0.65rem;
+          left: -5.05rem;
+      }
+  }
+
+}
+.swiper-slide img {
+  width: 60%;
+  height: 60%;
+  border-radius: 20px; 
+  opacity:0.5;
+  position: absolute;
+  top: 10.6rem;
+  left: 1.2rem;
+  right: 0;
+  margin: 0 auto;
+
+}
+.kaba {
+color:#5db761 ;
+
+}
+
+.nlp {
+color:#8c1919;
+}
+.ellipses {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  border-style: solid;
+}
+
+.ellipses__outer--thin {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-color: rgba(9, 56, 62, 0.1);
+  animation: ellipsesOrbit 15s ease-in-out infinite;
+
+
+  &:after {
+    content: "";
+    background-image: url('https://s29.postimg.org/5h0r4ftkn/ellipses_dial.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.15;
+  }
+}
+
+.ellipses__outer--thick {
+  width: 99.5%;
+  height: 99.5%;
+  border-color: #5db761 transparent;
+  border-width: 2px;
+  transform: rotate(-45deg);
+  animation: ellipsesRotate 15s ease-in-out infinite;
+}
+
+.ellipses__orbit {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-width: 2px;
+  border-color: #5db761;
+  top: 5rem;
+  right: 6.75rem;
+
+  &:before {
+      content: '';
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #8c1919;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+  }
+}
+
+
+
+
+@keyframes ellipsesRotate {
+  0% {
+      transform: rotate(-45deg);
+  }
+
+  100% {
+      transform: rotate(-405deg);
+  }
+}
+
+@keyframes ellipsesOrbit {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+        </style>
+        <div class="container">
+          <div class="container__item landing-page-container">
+              <div class="content__wrapper">
+                  <div class="ellipses-container">
+                    <h1 class="logo_name"><span class="kaba">Kabarak<!--</span><span class="nlp">NLP</span> --></h1>
+                        <div class="swiper-slide">
+                          <img src="https://avatars.githubusercontent.com/u/161768004?s=400&u=de68f82a572dbb2d6f70866d4b902740c941b313&v=4" />
+                    </div>
+                      <div class="ellipses ellipses__outer--thin">
+                          <div class="ellipses ellipses__orbit"></div>
+                      </div>
+                      <div class="ellipses ellipses__outer--thick"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+<div class="get-started white-text">
+    <button type="button" class="get-started" data-open="modal1">
+     Get Started
+    </button>
+  </div>
+  
+  <div class="modal" id="modal1" data-animation="slideInOutLeft">
+    <div class="modal-dialog">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <header class="modal-header">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+      </header>
+      <div class="modal-content">
+        <button class="btn btn-primary2" onclick="window.location.href='{% url 'account_login' %}'">
+          <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	           width="50px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+              <g>
+                <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472
+                  c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                <path d="M296,240h-8.5c0.312-2.516,0.5-5.188,0.5-8c0-13.203-14.406-24-32-24s-32,10.797-32,24c0,2.812,0.188,5.484,0.5,8H216
+                  c-4.422,0-8,3.578-8,8v48c0,4.422,3.578,8,8,8h80c4.422,0,8-3.578,8-8v-48C304,243.578,300.422,240,296,240z M240,240
+                  c-4.797-9.594,7.203-19.203,16-19.203s20.797,9.609,16,19.203H240z"/>
+                <path d="M370.906,311.188L401.594,256h-19.188c-0.797-72.344-56.625-127.516-126.781-127.609
+                  c-70.609-0.078-127.766,57.078-127.672,127.688c0.078,70.625,57.359,127.906,127.969,127.969
+                  c39.875,0.094,75.406-18.125,98.797-46.625l-15.281-25.484c-17.938,27.016-48.641,44.75-83.562,44.703
+                  c-55.469-0.031-100.484-45.047-100.531-100.531c-0.062-55.484,44.844-100.375,100.312-100.312
+                  c55.219,0.094,99.078,45.781,99.547,100.203l-19.047-0.031L370.906,311.188z"/>
+              </g>
+          </svg>
+          Login
+        </button>
+
+        <button class="btn btn-primary3" onclick="window.location.href='{% provider_login_url 'github' %}'">
+          <svg width="50px"  viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+            <title>github [#142]</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+
+            </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                          <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]">
+
+                          </path>
+                    </g>
+                </g>
+            </g>
+          </svg>
+          Sign Up with GitHub
+        </button><br><br>
+
+        <button class="btn btn-primary4" onclick="window.location.href='{% provider_login_url 'google' %}'">
+          <svg width="50px" viewBox="-0.5 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+            <title>Google-color</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+
+          </defs>
+          <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Color-" transform="translate(-401.000000, -860.000000)">
+                  <g id="Google" transform="translate(401.000000, 860.000000)">
+                      <path d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24" id="Fill-1" fill="#FBBC05">
+
+                      </path>
+                      <path d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333" id="Fill-2" fill="#EB4335">
+
+                      </path>
+                      <path d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667" id="Fill-3" fill="#34A853">
+
+                      </path>
+                      <path d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24" id="Fill-4" fill="#4285F4">
+
+                      </path>
+                  </g>
+                </g>
+              </g>
+         </svg>
+          Login with Google
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  </div>
+
+
+  </div>
+
+
+  {% if user.is_authenticated %}
+  <div class="alert success">
+    <span class="closebtn">&times;</span>  
+    <strong>Success!</strong> Welcome {{ user.username }} !!!
+  </div>
+  
+    
+    <li><a href="{% url 'account_logout' %}" class="btn btn-danger">Logout</a>
+
+
+  
+   
+  {% endif %}
+
+
+
+</body>
+
+<script>
+const openEls = document.querySelectorAll("[data-open]");
+const closeEls = document.querySelectorAll("[data-close]");
+const isVisible = "is-visible";
+
+for (const el of openEls) {
+  el.addEventListener("click", function() {
+    const modalId = this.dataset.open;
+    document.getElementById(modalId).classList.add(isVisible);
+  });
+}
+
+for (const el of closeEls) {
+  el.addEventListener("click", function() {
+    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+  });
+}
+
+document.addEventListener("click", e => {
+  if (e.target == document.querySelector(".modal.is-visible")) {
+    document.querySelector(".modal.is-visible").classList.remove(isVisible);
+  }
+});
+
+</script>
+{% endblock content %}
