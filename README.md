@@ -1,6 +1,6 @@
 <h1 align="center"> kabarakNLP</h1>
 
-![image](https://github.com/user-attachments/assets/8b74ffaf-8566-4515-978b-bbc7eb8e69d2)
+![image](https://github.com/user-attachments/assets/0c6293fd-8e60-42c4-97e5-be404bdfee5e)
 
 <h3 align="left"> KabarakNLP is a student-led initiative at Kabarak University dedicated to exploring Natural Language Processing (NLP). We aim to create a vibrant community for those interested in learning about NLP, collaborating on projects, and staying updated on the latest advancements in the field</h3>
 
