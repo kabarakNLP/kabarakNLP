@@ -60,24 +60,26 @@ Download and Install [Pyton](https://python.org) >= 3.10
    ```
    
 6. Create a '.env' file and add your variables.
+  ```bash
+   EMAIL_HOST=smtp.gmail.com
+   EMAIL_PORT=587
+   EMAIL_HOST_USER=your@gmail.com
+   EMAIL_HOST_PASSWORD=*** sethostpassword ***
+   EMAIL_USE_TLS=True
+  ```
 
-    EMAIL_HOST=smtp.gmail.com
-    EMAIL_PORT=587
-    EMAIL_HOST_USER=your@gmail.com
-    EMAIL_HOST_PASSWORD=*** sethostpassword ***
-    EMAIL_USE_TLS=True
-
-7. Makemigrations
+8. Makemigrations
    ```bash
    python manage.py makemigrations
+   
    python manage.py migrate
    ```
-8. Run Server
+9. Run Server
 
-   ```
+   ```bash
    python manage.py runserver
    
    ```
    
-9. Open [http://localhost:8000](http://localhost:8000) or [http://127.0.0.1:8000](http://127.0.0.1:8000)
+10. Open [http://localhost:8000](http://localhost:8000) or [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
